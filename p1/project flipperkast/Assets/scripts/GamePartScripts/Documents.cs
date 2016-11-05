@@ -4,6 +4,7 @@ using System.Collections;
 public class Documents : MonoBehaviour {
 
     public int touched;
+    public bool balladd;
 	void Start () {
 	
 	}
@@ -26,6 +27,16 @@ public class Documents : MonoBehaviour {
             GameObject.Find("Powerpoint").GetComponent<OutlookPowerpoint>().touched == true)
         {
             touched = 3;
+        } else if (touched == 4 &&
+            GameObject.Find("Word").GetComponent<WordExcel>().touched == true &&
+            GameObject.Find("Excel").GetComponent<WordExcel>().touched == true &&
+            GameObject.Find("Outlook").GetComponent<OutlookPowerpoint>().touched == true &&
+            GameObject.Find("Powerpoint").GetComponent<OutlookPowerpoint>().touched == true &&
+            GameObject.Find("Acces").GetComponent<AccesPublisher>().touched == true &&
+            GameObject.Find("Publisher").GetComponent<AccesPublisher>().touched == true)
+        {
+            balladd = true;
+            touched = 0;
         } else if (touched > 1) {
             touched = touched - 1;
         }
