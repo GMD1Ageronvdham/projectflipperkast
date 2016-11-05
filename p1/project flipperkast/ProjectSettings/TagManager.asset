@@ -7,6 +7,7 @@ TagManager:
   - ball
   - New Tag
   - launcher
+  - dead
   layers:
   - Default
   - TransparentFX
