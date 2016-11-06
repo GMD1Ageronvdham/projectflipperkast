@@ -3,13 +3,13 @@ using System.Collections;
 
 public class Fence : MonoBehaviour {
 
-	void Start () {
-        gameObject.GetComponent<MeshCollider>().enabled = false;
-        gameObject.GetComponent<MeshRenderer>().enabled = false;
-    }
+
 	void Update () {
-	
-        if (GameObject.Find("AfterFireDetect").GetComponent<BallFired>().playing == true)
+        if (GameObject.Find("Canvas").GetComponent<GameStart>().gamestart == false)
+        {
+            gameObject.GetComponent<MeshCollider>().enabled = true;
+            gameObject.GetComponent<MeshRenderer>().enabled = true;
+        } else if (GameObject.Find("AfterFireDetect").GetComponent<BallFired>().playing == true)
         {
             gameObject.GetComponent<MeshCollider>().enabled = true;
             gameObject.GetComponent<MeshRenderer>().enabled = true;
@@ -18,4 +18,5 @@ public class Fence : MonoBehaviour {
             gameObject.GetComponent<MeshRenderer>().enabled = false;
         }
     }
+    
 }

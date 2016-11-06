@@ -17,6 +17,11 @@ public class Dead : MonoBehaviour {
 	void Update ()
     {
         tekst.text = pinballs.ToString();
+        if (GameObject.Find("MyDocuments").GetComponent<Documents>().balladd == true)
+        {
+            pinballs = pinballs + 1;
+            GameObject.Find("MyDocuments").GetComponent<Documents>().balladd = false;
+        }
         if (GameObject.Find("Dead").GetComponent<DeadDetect>().touch == true)
         {
             transform.position = Endposition;

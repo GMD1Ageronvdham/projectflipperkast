@@ -15,15 +15,15 @@ public class Bounce : MonoBehaviour
         }
         if (GameObject.Find("MyDocuments").GetComponent<Documents>().touched == 1)
         {
-            force = -100;
+            force = -60;
         }
         if (GameObject.Find("MyDocuments").GetComponent<Documents>().touched == 2)
         {
-            force = -150;
+            force = -70;
         }
         if (GameObject.Find("MyDocuments").GetComponent<Documents>().touched == 3)
         {
-            force = -200;
+            force = -80;
         }
     }
     public void OnCollisionEnter(Collision collision)

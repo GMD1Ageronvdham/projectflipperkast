@@ -20,5 +20,6 @@ public class DeadDetect : MonoBehaviour {
     public void OnCollisionEnter (Collision collision)
     {
         touch = true;
+        GameObject.Find("Ball").GetComponent<Dead>().pinballs = GameObject.Find("Ball").GetComponent<Dead>().pinballs -1;
     }
 }

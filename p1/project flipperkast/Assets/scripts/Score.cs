@@ -41,6 +41,21 @@ public class Score : MonoBehaviour {
         {
             score = 0;
         }
+        if (GameObject.Find("Canvas").GetComponent<Af>().readscore == true)
+        {
+            score = 1;
+            scoreword = 0;
+            scoreexcel = 0;
+            scoreoutlook = 0;
+            scorepowerpoint = 0;
+            scoreacces = 0;
+            scorepublisher = 0;
+            scoreinternet = 0;
+            scoreprullebak = 0;
+            scoredocuments = 0;
+            scoreLB = 0;
+            scoreRB = 0;
+        }
         tekst.text = score.ToString();
     }
 }
