@@ -20,6 +20,8 @@ public class GameStart : MonoBehaviour {
             GameObject.Find("StartButton").GetComponent<Image>().enabled = false;
             GameObject.Find("StartButton").GetComponent<Button>().enabled = false;
             GameObject.Find("StartText").GetComponent<Text>().enabled = false;
+            GameObject.Find("LastScoreText").GetComponent<Text>().enabled = false;
+            GameObject.Find("HighscoreText").GetComponent<Text>().enabled = false;
         } else {
             GameObject.Find("MenuBackground").GetComponent<RawImage>().enabled = true;
             GameObject.Find("HighScore").GetComponent<RawImage>().enabled = true;
@@ -30,6 +32,8 @@ public class GameStart : MonoBehaviour {
             GameObject.Find("StartButton").GetComponent<Image>().enabled = true;
             GameObject.Find("StartButton").GetComponent<Button>().enabled = true;
             GameObject.Find("StartText").GetComponent<Text>().enabled = true;
+            GameObject.Find("LastScoreText").GetComponent<Text>().enabled = true;
+            GameObject.Find("HighscoreText").GetComponent<Text>().enabled = true;
         }
 	}
     public void buttonClicked()

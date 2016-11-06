@@ -46,8 +46,6 @@ public class Af : MonoBehaviour {
             {
                 highscore = lastscore;
             }
-            PlayerPrefs.SetFloat(highscorestring, highscore);
-            PlayerPrefs.Save();
             Highscoretext.text = highscore.ToString();
         }
 	}

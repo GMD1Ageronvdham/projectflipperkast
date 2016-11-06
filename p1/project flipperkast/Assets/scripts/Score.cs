@@ -43,7 +43,7 @@ public class Score : MonoBehaviour {
         }
         if (GameObject.Find("Canvas").GetComponent<Af>().readscore == true)
         {
-            score = 1;
+            score = 0;
             scoreword = 0;
             scoreexcel = 0;
             scoreoutlook = 0;
@@ -55,6 +55,18 @@ public class Score : MonoBehaviour {
             scoredocuments = 0;
             scoreLB = 0;
             scoreRB = 0;
+            GameObject.Find("Word").GetComponent<ScoreAdd>().scoretaken = 0;
+            GameObject.Find("Excel").GetComponent<ScoreAdd>().scoretaken = 0;
+            GameObject.Find("Outlook").GetComponent<ScoreAdd>().scoretaken = 0;
+            GameObject.Find("Powerpoint").GetComponent<ScoreAdd>().scoretaken = 0;
+            GameObject.Find("Acces").GetComponent<ScoreAdd>().scoretaken = 0;
+            GameObject.Find("Publisher").GetComponent<ScoreAdd>().scoretaken = 0;
+            GameObject.Find("Internet").GetComponent<ScoreAdd>().scoretaken = 0;
+            GameObject.Find("prullebak").GetComponent<ScoreAdd>().scoretaken= 0;
+            GameObject.Find("MyDocuments").GetComponent<ScoreAdd>().scoretaken = 0;
+            GameObject.Find("ColliderL").GetComponent<ScoreAdd>().scoretaken = 0;
+            GameObject.Find("ColliderR").GetComponent<ScoreAdd>().scoretaken = 0;
+            GameObject.Find("Canvas").GetComponent<Af>().readscore = false;
         }
         tekst.text = score.ToString();
     }

@@ -1,49 +1,49 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+// dit is het script voor de bounce ball op de rechterflipper
+// dit script is een samenwerkingsproject tussen mij, Geron, en Stephen
 public class FlipperbounceRight : MonoBehaviour
 {
     public bool flipperactivatedleft;
     public bool flipperactivatedright;
     public float counterleft;
     public float counterright;
-    public int handen = 1;
+    public int var = 1;
     public Rigidbody speler;
     public Vector3 force;
     public bool hit;
     public bool timershot;
-    // Update is called once per frame
+
     void Update()
     {
-        //The input of the button starts a timer that resets after a short period of time hopefully the time it takes for the flipper to reach its rotation
-
         if (Input.GetKey(KeyCode.RightShift))
         {
             timershot = true;
             flipperactivatedright = true;
-        }
-        else
-        {
+            // de input start een aantal boolean om een timer aan te zetten
+        } else {
             timershot = false;
             counterright = 0;
             flipperactivatedright = false;
-            handen = 0;
+            var = 0;
+            // alles word gedissabled en uitgezet als de knop niet is ingedrukt(in de praktijk zijn hier wat onfixbare problemen mee)
         }
         if (counterright >= 0.06f)
         {
             timershot = false;
             counterright = 0;
-            handen = 0;
+            var = 0;
             hit = false;
+            // als de flipper de beweging gehad heeft en weer stilstaat word ook alles uitgezet (werkt in de praktijk ook niet perfect)
         }
         if (timershot == true)
         {
-            Tim();
+            Timer();
+            // hier word de fuctie aangeroepen die de timer bijhoud
+        } else {
+            var = 0;
         }
-        else
-            handen = 0;
     }
-
     public void OnCollisionEnter(Collision collision)
     {
 
@@ -51,12 +51,15 @@ public class FlipperbounceRight : MonoBehaviour
         {
             speler.AddForce(force * counterright);
             hit = true;
+            // hier word de force toegevoegd als de ball de flipper raakt
+        } else {
+            hit = false;
         }
-        else hit = false;
     }
-    public void Tim()
+    public void Timer()
     {
-        handen = handen + 1;
-        counterright = handen * Time.deltaTime;
+        var = var + 1;
+        counterright = var * Time.deltaTime;
+        // dit is de timer
     }
 }

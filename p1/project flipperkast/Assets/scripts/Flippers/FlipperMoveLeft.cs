@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+// dit is het script voor het bewegen van de linker flipper
+// alles is hetzelfde als in het FlipperMoveRight script behalve de keycode voor de knop
+// daarom: zie FlipperMoveRight voor uitleg
 public class FlipperMoveLeft : MonoBehaviour
 {
     public bool flipactivated;
