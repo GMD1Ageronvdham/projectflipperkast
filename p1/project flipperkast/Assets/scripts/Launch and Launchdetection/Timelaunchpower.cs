@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-
+// dit script lanceert de bal
+// dit script is een samenwerkingsproject tussen mij, Geron, en Stephen
 public class Timelaunchpower : MonoBehaviour
 {
     public float counter;
@@ -12,18 +13,18 @@ public class Timelaunchpower : MonoBehaviour
     public Text tekst;
     public bool count;
 
-    // Update is called once per frame
     void Update()
     {
-        if (readytolaunch == true &&
-            Input.GetButtonUp("Jump"))
+        if (readytolaunch == true && Input.GetButtonUp("Jump"))
         {
             ball.AddForce(force * counter);
+            // deze if statement voegt de force toe. dit kan alleen als de bal op het launch platform ligt en de knop is ingedrukt
         }
         if (Input.GetButtonUp("Jump"))
         {
             readytolaunch = false;
             count = false;
+            // als de knop word losgelaten, word de counter uitgezet
         }
         if (Input.GetButtonDown("Jump"))
         {
@@ -32,12 +33,14 @@ public class Timelaunchpower : MonoBehaviour
         if (count == true && counter < 3)
         {
             Timer();
+            // deze if statement roept de timer aan
         } else {
             count = false;
         }
         if (counter > 3)
         {
             counter = 0;
+            // als de counter boven de 3f komt, word hij gereset naar 0 en begin je opnieuw te tellen
         }
         if (counter < 0.5f)
         {
@@ -58,6 +61,7 @@ public class Timelaunchpower : MonoBehaviour
         {
             launchspeed = 6;
         }
+        // de if statements hierboven zijn voor het weergeven van de launchspeed op het scherm. hieronder word deze geoutput naar het beeld
         tekst.text = launchspeed.ToString();
     }
     public void Timer()
@@ -65,6 +69,7 @@ public class Timelaunchpower : MonoBehaviour
         if (readytolaunch == true)
         {
             counter = counter + Time.deltaTime;
+            // de timer
         }
     }
     public void OnCollisionEnter(Collision collision)
@@ -73,7 +78,7 @@ public class Timelaunchpower : MonoBehaviour
         if (collision.gameObject.tag == "launcher")
         {
             readytolaunch = true;
-
+            // er mag pas getelt worden vanaf het moment dat de bal het launchplatform raakt
         }
     }
 }
