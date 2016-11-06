@@ -1,16 +1,22 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class Dead : MonoBehaviour {
 
+    public int pinballs;
     public Vector3 Endposition;
     public bool transport;
-	void Start () {
-	
+    public Text tekst;
+
+    void Start ()
+    {
+        pinballs = 3;
 	}
 
-	void Update () {
-
+	void Update ()
+    {
+        tekst.text = pinballs.ToString();
         if (GameObject.Find("Dead").GetComponent<DeadDetect>().touch == true)
         {
             transform.position = Endposition;

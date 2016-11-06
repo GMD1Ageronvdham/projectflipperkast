@@ -16,7 +16,6 @@ public class Score : MonoBehaviour {
     public float scoredocuments;
     public float scoreLB;
     public float scoreRB;
-    public float scoreSB;
     public Text tekst;
 	void Start () {
 	
@@ -35,10 +34,9 @@ public class Score : MonoBehaviour {
         scoredocuments = GameObject.Find("MyDocuments").GetComponent<ScoreAdd>().scoretaken;
         scoreLB = GameObject.Find("ColliderL").GetComponent<ScoreAdd>().scoretaken;
         scoreRB = GameObject.Find("ColliderR").GetComponent<ScoreAdd>().scoretaken;
-        scoreSB = GameObject.Find("SideBounce").GetComponent<ScoreAdd>().scoretaken;
 
         score = scoreword + scoreexcel + scorepowerpoint + scoreoutlook + scorepublisher + scoreacces 
-        + scoreinternet + scoreprullebak +scoredocuments + scoreLB + scoreRB + scoreSB; 
+        + scoreinternet + scoreprullebak +scoredocuments + scoreLB + scoreRB; 
         if (score < 0)
         {
             score = 0;
