@@ -21,6 +21,12 @@ public class GameStart : MonoBehaviour {
             GameObject.Find("StartText").GetComponent<Text>().enabled = false;
             GameObject.Find("LastScoreText").GetComponent<Text>().enabled = false;
             GameObject.Find("HighscoreText").GetComponent<Text>().enabled = false;
+            GameObject.Find("Stop").GetComponent<Image>().enabled = false;
+            GameObject.Find("Stop").GetComponent<Image>().enabled = false;
+            GameObject.Find("Stoptext").GetComponent<Text>().enabled = false;
+            GameObject.Find("Pauze").GetComponent<Image>().enabled = false;
+            GameObject.Find("Pauze").GetComponent<Image>().enabled = false;
+            GameObject.Find("Pauzetext").GetComponent<Text>().enabled = false;
             // het startmenu word uitgeschakeld
             GameObject.Find("Panel").GetComponent<Image>().enabled = true;
             GameObject.Find("Scoretekst").GetComponent<Text>().enabled = true;
@@ -29,6 +35,12 @@ public class GameStart : MonoBehaviour {
             GameObject.Find("Pinballs").GetComponent<Text>().enabled = true;
             GameObject.Find("Launchspeedtekst").GetComponent<Text>().enabled = true;
             GameObject.Find("Launchspeed").GetComponent<Text>().enabled = true;
+            GameObject.Find("Stop").GetComponent<Image>().enabled = true;
+            GameObject.Find("Stop").GetComponent<Image>().enabled = true;
+            GameObject.Find("Stoptext").GetComponent<Text>().enabled = true;
+            GameObject.Find("Pauze").GetComponent<Image>().enabled = true;
+            GameObject.Find("Pauze").GetComponent<Image>().enabled = true;
+            GameObject.Find("Pauzetext").GetComponent<Text>().enabled = true;
             // het ingame menu word ingeschakeld
 
         } else {
@@ -42,6 +54,12 @@ public class GameStart : MonoBehaviour {
             GameObject.Find("StartText").GetComponent<Text>().enabled = true;
             GameObject.Find("LastScoreText").GetComponent<Text>().enabled = true;
             GameObject.Find("HighscoreText").GetComponent<Text>().enabled = true;
+            GameObject.Find("Stop").GetComponent<Image>().enabled = true;
+            GameObject.Find("Stop").GetComponent<Image>().enabled = true;
+            GameObject.Find("Stoptext").GetComponent<Text>().enabled = true;
+            GameObject.Find("Pauze").GetComponent<Image>().enabled = true;
+            GameObject.Find("Pauze").GetComponent<Image>().enabled = true;
+            GameObject.Find("Pauzetext").GetComponent<Text>().enabled = true;
             //het startmenu word aangezet
             GameObject.Find("Panel").GetComponent<Image>().enabled = false;
             GameObject.Find("Scoretekst").GetComponent<Text>().enabled = false;
@@ -50,6 +68,12 @@ public class GameStart : MonoBehaviour {
             GameObject.Find("Pinballs").GetComponent<Text>().enabled = false;
             GameObject.Find("Launchspeedtekst").GetComponent<Text>().enabled = false; 
             GameObject.Find("Launchspeed").GetComponent<Text>().enabled = false;
+            GameObject.Find("Stop").GetComponent<Image>().enabled = false;
+            GameObject.Find("Stop").GetComponent<Image>().enabled = false;
+            GameObject.Find("Stoptext").GetComponent<Text>().enabled = false;
+            GameObject.Find("Pauze").GetComponent<Image>().enabled = false;
+            GameObject.Find("Pauze").GetComponent<Image>().enabled = false;
+            GameObject.Find("Pauzetext").GetComponent<Text>().enabled = false;
             // het ingamemenu uitgezet
         }
 	}
