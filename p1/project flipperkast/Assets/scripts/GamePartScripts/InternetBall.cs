@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+// dit script verandert de physics van de ball als internet is geraakt
 public class InternetBall : MonoBehaviour {
 
     public Vector3 physicsslow;
@@ -13,6 +13,7 @@ public class InternetBall : MonoBehaviour {
         {
             Physics.gravity = physicsslow;
             low = true;
+            // als internet is geraakt word de vector physicsslow geactiveerd
         } else {
             Physics.gravity = physicsnormal;
             low = false;
@@ -21,6 +22,7 @@ public class InternetBall : MonoBehaviour {
         {
             Physics.gravity = physicsnormal;
             low = false;
+            // als je dood bent, word de traagheid uitgezet
         }
     }
 }

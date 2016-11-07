@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 // dit script lanceert de bal
-// dit script is een samenwerkingsproject tussen mij, Geron, en Stephen
+// dit script is een samenwerkingsproject tussen mij, Geron, en Steven
 public class Timelaunchpower : MonoBehaviour
 {
     public float counter;

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-
+// in dit script worden alles scores bij elkaar opgeteld
 public class Score : MonoBehaviour {
 
     public float score;
@@ -34,12 +34,14 @@ public class Score : MonoBehaviour {
         scoredocuments = GameObject.Find("MyDocuments").GetComponent<ScoreAdd>().scoretaken;
         scoreLB = GameObject.Find("ColliderL").GetComponent<ScoreAdd>().scoretaken;
         scoreRB = GameObject.Find("ColliderR").GetComponent<ScoreAdd>().scoretaken;
-
+        // alle floats worden overgenomen naar floats in dit script, dit was handiger voor testen, maar ook om de berekening hieronder overzichtelijker te maken
         score = scoreword + scoreexcel + scorepowerpoint + scoreoutlook + scorepublisher + scoreacces 
         + scoreinternet + scoreprullebak +scoredocuments + scoreLB + scoreRB; 
+        // de uiteindelijke berekening
         if (score < 0)
         {
             score = 0;
+            // als de score door de trashcan onder de 0 komt, word deze terug naar 0 gezet.
         }
         if (GameObject.Find("Canvas").GetComponent<Af>().readscore == true)
         {
@@ -67,6 +69,7 @@ public class Score : MonoBehaviour {
             GameObject.Find("ColliderL").GetComponent<ScoreAdd>().scoretaken = 0;
             GameObject.Find("ColliderR").GetComponent<ScoreAdd>().scoretaken = 0;
             GameObject.Find("Canvas").GetComponent<Af>().readscore = false;
+            // readscore is een boolean gemaakt om de score te resseten, nadat deze is geoutput in het startmenu
         }
         tekst.text = score.ToString();
     }

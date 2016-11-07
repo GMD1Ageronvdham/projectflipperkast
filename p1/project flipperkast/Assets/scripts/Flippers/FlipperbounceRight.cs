@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 // dit is het script voor de bounce ball op de rechterflipper
-// dit script is een samenwerkingsproject tussen mij, Geron, en Stephen
+// dit script is een samenwerkingsproject tussen mij, Geron, en Steven
 public class FlipperbounceRight : MonoBehaviour
 {
     public bool flipperactivatedleft;
