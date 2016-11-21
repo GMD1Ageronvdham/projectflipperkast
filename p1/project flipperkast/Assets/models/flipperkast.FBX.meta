@@ -1,0 +1,130 @@
+fileFormatVersion: 2
+guid: 1022e0fe15e345e479a805b1b2923cd0
+timeCreated: 1478270888
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Box002
+    100002: Flipper links
+    100004: Flipper rechts
+    100006: //RootNode
+    100008: internet explorer
+    100010: m
+    100012: m001
+    100014: ondergrond
+    100016: rand
+    100018: Shape1
+    100020: Taakbalk links
+    100022: Taakbalk Rechts
+    400000: Box002
+    400002: Flipper links
+    400004: Flipper rechts
+    400006: //RootNode
+    400008: internet explorer
+    400010: m
+    400012: m001
+    400014: ondergrond
+    400016: rand
+    400018: Shape1
+    400020: Taakbalk links
+    400022: Taakbalk Rechts
+    2300000: Box002
+    2300002: Flipper links
+    2300004: Flipper rechts
+    2300006: internet explorer
+    2300008: m
+    2300010: m001
+    2300012: ondergrond
+    2300014: rand
+    2300016: Shape1
+    2300018: Taakbalk links
+    2300020: Taakbalk Rechts
+    3300000: Box002
+    3300002: Flipper links
+    3300004: Flipper rechts
+    3300006: internet explorer
+    3300008: m
+    3300010: m001
+    3300012: ondergrond
+    3300014: rand
+    3300016: Shape1
+    3300018: Taakbalk links
+    3300020: Taakbalk Rechts
+    4300000: ondergrond
+    4300002: Flipper rechts
+    4300004: Flipper links
+    4300006: Taakbalk links
+    4300008: Taakbalk Rechts
+    4300010: Box002
+    4300012: rand
+    4300014: internet explorer
+    4300016: m
+    4300018: m001
+    4300020: Shape1
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
