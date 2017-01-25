@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TabletTrigger : MonoBehaviour
+public class ItemTrigger : MonoBehaviour
 {
-    public GameObject manager;
+
+    public GameObject items;
     public bool hit;
 
     void OnTriggerEnter(Collider other)
     {
         hit = true;
-        manager.GetComponent<Manager>().loop();
+        items.GetComponent<Items>().ItemStart();
     }
 }
