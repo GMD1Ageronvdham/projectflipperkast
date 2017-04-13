@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public UIManager UIManager1;
+    public UIManager uiManager;
     public GameProgress progress;
 
     void Start ()
@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
 	}
     public void StartScreen ()
     {
-        UIManager1.Menu();
+        uiManager.Menu();
     }
     public void NewGame()
     {

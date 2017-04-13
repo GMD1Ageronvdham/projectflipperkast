@@ -5,15 +5,15 @@ using UnityEngine;
 public class TouchGround : MonoBehaviour
 {
     public Move Player;
-    public GameObject Trigger;
+    public GameObject trigger;
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.transform.position.y < Trigger.transform.position.y && Player.status == Move.state.Fall)
+        if (collision.transform.position.y < trigger.transform.position.y && Player.status == Move.state.Fall)
         {
             Player.Fall(collision.transform.position.y);
         }
-        if (collision.transform.position.y < Trigger.transform.position.y && Player.status == Move.state.Jump)
+        if (collision.transform.position.y < trigger.transform.position.y && Player.status == Move.state.Jump)
         {
             Player.TouchGround(collision.transform.position.y);
         }

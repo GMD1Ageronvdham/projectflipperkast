@@ -30,14 +30,14 @@ public class GameProgress : MonoBehaviour
     //4. new day starts
     //5. visited the shop
     //6. fire starts
-    public GameObject Fire;
+    public GameObject fire;
 
     void Start()
     {
         difficulty = 1;
         partOne.SetActive(false);
         cutscene1.GetComponent<Camera>().enabled = false;
-        Fire.SetActive(false);
+        fire.SetActive(false);
     }
 
     void Update()

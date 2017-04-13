@@ -12,15 +12,15 @@ public class Conversation : MonoBehaviour
     public bool playerpos;
     public int count;
     public Text presE;
-    public Text PlayerText;
+    public Text playerText;
     public Text owntext;
     public Image ownImage;
-    public Text PlayerChoice;
+    public Text playerChoice;
     public Image playerImage;
     public Image choiceimage;
-    public Image PressEImagee;
+    public Image pressEImagee;
     public int action;
-    public ConversationManager CManager;
+    public ConversationManager cManager;
     public bool choice;
 
     void Start()
@@ -38,13 +38,13 @@ public class Conversation : MonoBehaviour
         {
             talked = true;
             presE.enabled = false;
-            PressEImagee.enabled = false;
+            pressEImagee.enabled = false;
             count = 0;
         }
         if (talked == true && playerpos == true)
         {
             presE.enabled = false;
-            PressEImagee.enabled = false;
+            pressEImagee.enabled = false;
         }
         if (Input.GetButtonDown("Interact") && playerpos == true && talked == false)
         {
@@ -61,40 +61,40 @@ public class Conversation : MonoBehaviour
                 choice = true;
                 owntext.text = convList[count + 1];
                 ownImage.enabled = true;
-                PlayerText.text = ("");
+                playerText.text = ("");
                 playerImage.enabled = false;
                 choiceimage.enabled = true;
-                PlayerChoice.enabled = true;
+                playerChoice.enabled = true;
                 presE.enabled = false;
-                PressEImagee.enabled = false;
+                pressEImagee.enabled = false;
             }
             else if (convList[count] == "!!!")
             {
-                CManager.Action(action);
+                cManager.Action(action);
                 playerpos = false;
                 presE.enabled = false;
                 owntext.text = ("");
                 ownImage.enabled = false;
-                PlayerText.text = ("");
+                playerText.text = ("");
                 playerImage.enabled = false;
                 choiceimage.enabled = false;
-                PressEImagee.enabled = false;
+                pressEImagee.enabled = false;
                 count = 0;
-                PlayerChoice.enabled = false;
+                playerChoice.enabled = false;
                 choice = false;
             }
             else if (textLoc[count] == 0)
             {
                 owntext.text = convList[count];
                 ownImage.enabled = true;
-                PlayerText.text = ("");
+                playerText.text = ("");
                 playerImage.enabled = false;
             }
             else if (textLoc[count] == 1)
             {
                 owntext.text = ("");
                 ownImage.enabled = false;
-                PlayerText.text = convList[count];
+                playerText.text = convList[count];
                 playerImage.enabled = true;
             }
         }
@@ -104,15 +104,15 @@ public class Conversation : MonoBehaviour
             {
                 ownImage.enabled = false;
                 playerImage.enabled = false;
-                CManager.Action(action);
+                cManager.Action(action);
                 owntext.text = ("");
-                PlayerText.text = ("");
+                playerText.text = ("");
                 count += 3;
                 choice = false;
-                PlayerChoice.enabled = false;
+                playerChoice.enabled = false;
                 choiceimage.enabled = false;
                 presE.enabled = true;
-                PressEImagee.enabled = true;
+                pressEImagee.enabled = true;
             }
             else
             {
@@ -120,11 +120,11 @@ public class Conversation : MonoBehaviour
                 ownImage.enabled = true;
                 count += 3;
                 choice = false;
-                PlayerChoice.enabled = false;
+                playerChoice.enabled = false;
                 playerImage.enabled = false;
                 choiceimage.enabled = false;
                 presE.enabled = true;
-                PressEImagee.enabled = true;
+                pressEImagee.enabled = true;
             }
         }
         if (Input.GetButtonDown("2") && choice == true)
@@ -134,13 +134,13 @@ public class Conversation : MonoBehaviour
                 ownImage.enabled = false;
                 playerImage.enabled = false;
                 owntext.text = convList[count + 3];
-                CManager.Action(action);
+                cManager.Action(action);
                 count += 3;
                 choice = false;
-                PlayerChoice.enabled = false;
+                playerChoice.enabled = false;
                 choiceimage.enabled = false;
                 presE.enabled = true;
-                PressEImagee.enabled = true;
+                pressEImagee.enabled = true;
             }
             else
             {
@@ -149,17 +149,17 @@ public class Conversation : MonoBehaviour
                 playerImage.enabled = false;
                 count += 3;
                 choice = false;
-                PlayerChoice.enabled = false;
+                playerChoice.enabled = false;
                 choiceimage.enabled = false;
                 presE.enabled = true;
-                PressEImagee.enabled = true;
+                pressEImagee.enabled = true;
             }
         }
     }
     public void OnTriggerEnter()
     {
         playerpos = true;
-        PressEImagee.enabled = true;
+        pressEImagee.enabled = true;
         if (talked == false)
         {
             presE.enabled = true;
@@ -173,14 +173,14 @@ public class Conversation : MonoBehaviour
         presE.enabled = false;
         owntext.text = ("");
         ownImage.enabled = false;
-        PlayerText.text = ("");
+        playerText.text = ("");
         playerImage.enabled = false;
         choiceimage.enabled = false;
-        PressEImagee.enabled = false;
+        pressEImagee.enabled = false;
         if (choice == true)
         {
             count = 0;
-            PlayerChoice.enabled = false;
+            playerChoice.enabled = false;
 
         }
         choice = false;

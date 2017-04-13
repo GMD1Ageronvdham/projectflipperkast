@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class RotateObject : MonoBehaviour
 {
-    public enum Direction { Up, Forward, Left };
+    public enum Direction
+    {
+        Up,
+        Forward,
+        Left
+    }
+
     public Direction direction;
     public float speed;
 	void Update ()

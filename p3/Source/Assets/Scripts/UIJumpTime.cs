@@ -8,7 +8,7 @@ public class UIJumpTime : MonoBehaviour
 {
     public bool isjumping;
     public Move move;
-    public Text JumpTime;
+    public Text jumpTime;
     public Scrollbar bar;
     public float flytimeper;
     public float flytime;
@@ -23,7 +23,7 @@ public class UIJumpTime : MonoBehaviour
 
     void Update ()
     {
-        JumpTime.text = flytimeint.ToString();
+        jumpTime.text = flytimeint.ToString();
         flytimeint = Convert.ToInt32(flytime * 2);
         bar.size = flytimeper;
         if (isjumping == true)
