@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     }
     public void NewGame()
     {
-        progress.ProgressOne();
+        progress.Epilogue();
     }
 
 }

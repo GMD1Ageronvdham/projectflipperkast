@@ -1,13 +1,18 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Shop : MonoBehaviour {
 
     public GameObject shopText;
+    public Text jumpAmount;
+    public Text walkAmount;
     public Move move;
     public GameProgress progress;
     public UIJumpTime uiJumpTime;
+    public bool updateNumbers;
    
 
     void Start ()
@@ -17,12 +22,21 @@ public class Shop : MonoBehaviour {
 	
 	void Update ()
     {
-		
+		if (updateNumbers == true)
+        {
+            jumpAmount.text = uiJumpTime.flytimeint.ToString();
+            walkAmount.text = (Convert.ToInt32((move.walkspeed + move.walktimemod) * 100)).ToString();
+        }
 	}
     public void OnTriggerEnter(Collider other)
     {
-        print("hoi");
         shopText.SetActive(true);
+        updateNumbers = true;
+    }
+    public void OnTriggerExit(Collider other)
+    {
+        shopText.SetActive(false);
+        updateNumbers = false;
     }
     public void BuyFlyTime()
     {
@@ -38,7 +52,7 @@ public class Shop : MonoBehaviour {
     {
         if (progress.honeypots > 1)
         {
-            move.walktimemod += 0.05f;
+            move.walktimemod += 0.01f;
             progress.honeypots -= 2;
             progress.UpdateItemCount();
             uiJumpTime.Instant();

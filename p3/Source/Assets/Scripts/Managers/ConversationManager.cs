@@ -6,10 +6,12 @@ public class ConversationManager : MonoBehaviour
 {
     public GameProgress progress;
     public GameObject honeyPotforNPCTwo;
+    public GameObject honeyCombsforNPCR0b0bee;
 
     void Start()
     {
         honeyPotforNPCTwo.SetActive(false);
+        honeyCombsforNPCR0b0bee.SetActive(false);
     }
 
     public void Action(int i)
@@ -22,6 +24,22 @@ public class ConversationManager : MonoBehaviour
         if (i == 2)
         {
             honeyPotforNPCTwo.SetActive(true);
+        }
+        if (i == 3)
+        {
+            progress.DialogueTwo();
+        }
+        if (i == 4)
+        {
+            honeyCombsforNPCR0b0bee.SetActive(true);
+        }
+        if (i == 5)
+        {
+            progress.ProgressSeven();
+        }
+        if (i == 6)
+        {
+            progress.End();
         }
     }
 }

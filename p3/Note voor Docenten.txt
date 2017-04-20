@@ -1,0 +1,16 @@
+voor mike(3DS Max)
+
+vanwege het feit dat ik later starte en de lessen over characterdesign gemist heb,
+wist ik niet dat je Reset Xform moest doen voor het riggen. hierdoor is dit niet optijd gebeurt
+de rotatie die niet goed staat en scalling problems zijn dus vanwege zijn late start vanwege mijn laptop die kapot was
+
+voor Xander(Unity)
+voor de extra vleugels heb ik extra bones gebruikt en daarom heb ik geen humanoid. Wouter en Lajos hun bijen staan als NPC's in mijn game
+deze staan wel als humanoid
+
+verder als je het spel speelt en je wilt functies uittesten
+kan je in het opties menu de volgende cheat code invoeren:
+2B||!=2B 
+hiermee kan je enkele functies uittesten
+
+Groeten Geron

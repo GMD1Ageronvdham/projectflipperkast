@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
+    public bool gaming;
     public GameManager manager;
     public GameObject player;
     public Camera menuCamera;
@@ -28,6 +29,8 @@ public class UIManager : MonoBehaviour
     public Image playerIm1;
     public Image playerIm2;
     public Image pressEImage;
+    //optionmenu's
+    public AudioListener audiolistenerOne;
 
     void Start ()
     {
@@ -54,9 +57,7 @@ public class UIManager : MonoBehaviour
     }
     public void NewGame()
     {
-        Game();
         manager.NewGame();
-        menuCamera.GetComponent<Camera>().enabled = false;
     }
     public void Options()
     {
@@ -90,12 +91,21 @@ public class UIManager : MonoBehaviour
     }
     public void Character()
     {
-        beeAnimState += 1;
-        if (beeAnimState > 3)
+    }
+    public void mute()
+    {
+        if (audiolistenerOne.GetComponent<AudioListener>().enabled == true)
         {
-            beeAnimState = 0;
+            audiolistenerOne.GetComponent<AudioListener>().enabled = false;
         }
-        menuBeeAnim.SetInteger("State", beeAnimState);
+        if (audiolistenerOne.GetComponent<AudioListener>().enabled == false)
+        {
+            audiolistenerOne.GetComponent<AudioListener>().enabled = true;
+        }
+    }
+    public void exit()
+    {
+        Application.Quit();
     }
     public void optionsBack()
     {
