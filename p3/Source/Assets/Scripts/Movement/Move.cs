@@ -27,8 +27,11 @@ public class Move : MonoBehaviour
     public float walkspeed;
     public float walktimemod;
     public float step;
+    public float stepTwo;
     public float fallstep;
+    public float fallstepTwo;
     public float easystep;
+    public float easystepTwo;
     public float flystartpos;
     public float landofset;
     public float maxmove;
@@ -41,6 +44,9 @@ public class Move : MonoBehaviour
 
     void Update ()
     {
+        fallstep = fallstepTwo * Time.deltaTime;
+        step = stepTwo * Time.deltaTime;
+        easystep = easystepTwo * Time.deltaTime;
         //jump from idle
         if (Input.GetButtonDown("Jump") && status == state.Idle && isWalking == false && easyFall == false && status != state.Fall)
         {
